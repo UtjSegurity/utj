@@ -11,11 +11,9 @@
 	<div class="container_fluid p-3 my-3 bg-dark text-white" >
     <h1>Servicio por empleado</h1> <br><br>
 
-   
+   |<div><a href="empleados/create" class=" btn btn-primary"></a>Crear</div>
       
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#empleado_servicio_agregar">
-      Registro
-      </button>
+     
     
 
     </div>

@@ -1,11 +1,11 @@
-<?php 
 
- ?>
  <div class="modal" id="jornada_agregar" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
 
-    <form class="needs-validation" name="form_agregar" id="form_agregar" action="../back/controlador_jornada.php" method="POST" novalidate>
+    <form class="needs-validation" name="form_agregar" id="form_agregar"  action="/jornadas" method="POST" novalidate>
+       @csfr
+        @method('put')
 
       <div class="modal-header">
         <h2 class="modal-title">Datos </h2>
@@ -25,8 +25,8 @@
 
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="id">Id</label>
-      <input type="number"  class="form-control" id="id" name="id" placeholder="000000" readonly >
+      <label for="id">ID</label>
+      <input type="number"  class="form-control" id="id" name="id" placeholder="" readonly >
       <!-- hidden: esconde el id, diabled: para que no se vea  -->
       <div class="valid-feedback">
       </div><br>
@@ -34,41 +34,33 @@
      <!--Deben cambiarse los name y id  -->
 
 
+      <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="id">ID empleado</label>
+      <input type="number"  class="form-control" id="id_emple" name="id_emple" placeholder=""  >
+      <!-- hidden: esconde el id, diabled: para que no se vea  -->
+      <div class="valid-feedback">
+      </div><br>
+    </div>
+
 
    
   
     <div class="col-md-6 mb-3">
-      <label for="validationCustom01">horario</label>
+      <label for="validationCustom01">Horario</label>
       <input type="text" class="form-control" id="horario" name="horario" placeholder="00:00"  required>
       <div class="valid-feedback">
       </div>
     </div>
     <br>
 
-
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom01">herramienta_trabajo</label>
-      <input type="text" class="form-control" id="herramienta_trabajo" name="herramienta_trabajo"  required>
-      <div class="valid-feedback">
-      </div><br>
-    </div>
-
-  
-   
-   
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom01">Id empleado</label>
-      <input type="text" class="form-control" id="id_empleado" name="id_empleado"  required>
-      <div class="valid-feedback"><br>
-      </div>
-    </div>
  
-    
+     </div>
   
     </div>
   
  	<div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <button type="submit" class="btn ">Agregar</button>
       </div>
       </form>

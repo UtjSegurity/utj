@@ -1,12 +1,10 @@
-<?php
-
-?>
-
-   <div class="modal" id="jornada_eliminar<?php echo $mostrar['id']?>" tabindex="-1">
+<div class="modal" id="jornada_eliminar" tabindex="-1">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
      
-         <form class="needs-validation" name="form_eliminar" action="../back/controlador_jornada.php" method="POST" novalidate>
+         <form class="needs-validation" name="form_eliminar" action="/jornadas" method="POST" novalidate>
+          @csrf
+          @method('delete')
       <div class="modal-header">
         <h5 class="modal-title">Datos</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -23,8 +21,8 @@
   <div class="form-row">
     <div class="col-md-4 mb-3">
      
-       <label for="id">Id</label>
-      <input type="numer"  class="form-control" id="id_elim" name="id_elim" value="<?php echo $mostrar['id']?>" readonly >
+       <label for="id">ID</label>
+      <input type="numer"  class="form-control" id="id" name="id" value="" readonly >
       <div class="valid-feedback">
       </div>
     </div>
@@ -32,8 +30,8 @@
 
     <div class="col-md-4 mb-3">
 
-      <label for="validationCustom02">Id empleado</label>
-      <input type="text" class="form-control" id="id_empleado_elim" value="<?php echo $mostrar['id_empleado']?>" name="id_empleado_elim" placeholder="Jose Lopez" readonly><br>
+      <label for="validationCustom02">ID empleado</label>
+      <input type="text" class="form-control" id="id_empleado"  action="/jornadas" name="id_empleado" placeholder="Jose Lopez" readonly><br>
       <div class="valid-feedback">  
       </div>
       </div>
@@ -46,7 +44,7 @@
 
     <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Eliminar</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>   
  
 
@@ -76,8 +74,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-

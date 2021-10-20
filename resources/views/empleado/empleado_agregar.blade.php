@@ -1,11 +1,11 @@
-<?php 
+<!-------------------------------------Agregar------------------------------------------->
 
- ?>
- <div class="modal" id="empleado_agregar" tabindex="-1">
+<div class="modal" id="empleado_agregar" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
 
-    <form class="needs-validation" name="form_agregar" id="form_agregar" action="../back/controlador_empleado.php" method="POST" novalidate>
+    <form class="needs-validation" name="form_agregar" id="form_agregar" action="empleados" method="POST" novalidate>
+      @csrf
 
       <div class="modal-header">
         <h2 class="modal-title">Datos </h2>
@@ -17,7 +17,7 @@
          
      <!--copiado de formato de validacion colocar input -->
       
-         <input type="hidden" value="2"  name="opcion" >
+         <input type="hidden" value="2"   name="opcion" >
 
 
 
@@ -64,39 +64,40 @@
       <input type="text" class="form-control" id="correo" name="correo"  required>
       <div class="valid-feedback">
       </div><br>
- 	</div>
+  </div>
    
     <div class="col-md-6 mb-3">
       <label for="validationCustom01">Direccion</label>
       <input type="text" class="form-control" id="direccion" name="direccion"  required>
       <div class="valid-feedback">
       </div><br>
- 	</div>
+  </div>
    
     <div class="col-md-6 mb-3">
-      <label for="validationCustom01">Edad</label>
-      <input type="text" class="form-control" id="edad" name="edad"  required>
+      <label for="validationCustom01">Tipo empleado</label>
+      <input type="text" class="form-control" id="tipo_empleado" name="tipo_empleado"  required>
       <div class="valid-feedback"><br>
       </div>
     </div>
  
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom01">Sexo</label>
-      <select id="sexo" name="sexo" class="form-control" required>
-        <option value="Masculino">Masculino</option>
-        <option value="Femenino">Femenino</option>
-        <option value="Otro">Otro</option>
-      </select>
+   
       
       <div class="valid-feedback"><br>
       </div>
-  	</div>
+    </div>
   
     </div>
   
- 	<div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn ">Agregar</button>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      <button type="submit" class="btn btn-primary" >Agregar</button>
+
+        {{-- 
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+
+         --}}
       </div>
       </form>
 
@@ -131,3 +132,4 @@
     </div>
   </div>
 </div>
+
